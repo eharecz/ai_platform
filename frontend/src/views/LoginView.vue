@@ -75,7 +75,7 @@ export default {
 .login-wrapper {
   height: 100vh;
   background-image: url("@/assets/background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .login-content {

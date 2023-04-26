@@ -2,11 +2,12 @@
   <div>
     <el-menu mode="horizontal" :ellipsis="false" >
       <el-menu-item onclick="location.href='/'" class="logo" >
+      <!-- <li style="display: flex; justify-content: center; height: 30px;"> -->
         <img src="@/assets/logo.png" fit="contain" />
         <el-text size="large" >大连理工大学AI模型训练展示</el-text>
+      <!-- </li> -->
       </el-menu-item>
       <el-text size="large" tag="b" style="width: 100%; text-align: center;" >欢迎来到大连理工大学!</el-text>
-      <!-- <div style="flex-grow: 1;" /> -->
       <el-sub-menu index="1">
         <template #title>{{ userName }}</template>
         <el-menu-item @click="logout">退出</el-menu-item>
