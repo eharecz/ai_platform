@@ -70,6 +70,8 @@ export default {
       let self = this;
 
       axios({method: 'get', url: '/apis/model/getAllModel'}).then(function(response) {
+        self.trainModel = [];
+        self.showModel = [];
         for(let i = 0; i < response.data.length; i++) {
           if(response.data[i].containerId == undefined) continue;
 
