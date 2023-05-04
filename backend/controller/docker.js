@@ -49,9 +49,11 @@ async function stopModel(modelId) {
   var image = docker.getImage(imageName);
 
   // 停止容器并删除镜像
-  container.stop(function () {
-    container.remove().then(function () {image.remove();});
-  });
+  if(model.containerId != null) {
+    container.stop(function () {
+      container.remove().then(function () {image.remove();});
+    });
+  }
 
   // 删除目录
   fsExtra.remove('./' + model.modelPath);
