@@ -19,7 +19,7 @@ module.exports = {
     },
     proxy: {
       '/apis': {
-        target: 'https://172.25.191.101:18000',
+        target: 'https://ssdlut314.com:18000',
         changeOrigin: true,
         pathRewrite: {
           '^/apis': ''
