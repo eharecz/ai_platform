@@ -5,7 +5,7 @@
       <el-aside><AsideBar/></el-aside>
       <el-container class="model_view" >
         <p v-if="loading" v-loading="true" element-loading-text="模型加载中..." class="loading" />
-        <iframe :show="!loading" @load="loading=false" :src='"https://172.25.191.101:" + $route.query.port' ></iframe>
+        <iframe :show="!loading" @load="loading=false" :src='"https://ssdlut314.com:" + $route.query.port' ></iframe>
       </el-container>
     </el-container>
   </div>
