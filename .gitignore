@@ -3,3 +3,4 @@ node_modules/
 model_storage/
 trains/
 uploads/
+dist/

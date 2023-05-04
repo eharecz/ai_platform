@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
-import LoginView from '@/views/LoginView.vue'
-import ShowSVM from '@/views/model/ShowSVM.vue'
-import ShowFaceLandmark from '@/views/model/ShowFaceLandmark.vue'
-import TrainSVM from '@/views/model/TrainSVM.vue'
+import LoginRegisterView from '@/views/LoginRegisterView.vue'
+import AdminView from '@/views/AdminView.vue'
+import ModelView from '@/views/ModelView.vue'
 
 const routes = [
   {
@@ -13,23 +12,19 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'login',
-    component: LoginView
+    name: 'login_register',
+    component: LoginRegisterView
   },
   {
-    path: '/model/show_svm',
-    name:'show_svm',
-    component: ShowSVM
+    path: '/admin',
+    name: 'admin',
+    component: AdminView
   },
   {
-    path: '/model/show_face_landmark',
-    name: 'show_face_landmark',
-    component: ShowFaceLandmark
-  },
-  {
-    path: '/model/train_svm',
-    name: 'train_svm',
-    component: TrainSVM
+    path: '/model',
+    name: 'model',
+    component: ModelView,
+    props: true
   },
 ]
 

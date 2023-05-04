@@ -7,11 +7,14 @@ const fs = require('fs');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const dockerode = require('dockerode');
 
 // 路由引入
 const userRouter = require('./router/user');
-const trainRouter = require('./router/train');
 const modelRouter = require('./router/model');
+
+// docker管理模块引入
+const docker = require('./controller/docker');
 
 // express应用及中间件使用
 const app = express();
@@ -23,8 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 路由使用
 app.use('/user', userRouter);
-app.use('/train', trainRouter);
 app.use('/model', modelRouter);
+
+docker.resumeAllModel();
 
 // 开启https监听
 const ssl_options = {

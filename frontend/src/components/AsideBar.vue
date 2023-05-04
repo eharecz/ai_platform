@@ -1,10 +1,10 @@
 <template>
   <div>
-    <el-menu :collapse="isCollapse" class="aside-menu">
+    <el-menu class="aside-menu">
       <el-menu-item onclick="location.href='/'" index="1" >
-        <el-icon><Menu /></el-icon>
+        <el-icon><i-ep-Menu /></el-icon>
         <template #title>
-          <span>可展示模型</span>
+          <span>现有模型</span>
         </template>
       </el-menu-item>
     </el-menu>
@@ -15,18 +15,8 @@
 
 export default {
   name: 'SideNavigationBar',
-  components: {
-  },
-  data() {
-    return {
-      isCollapse: false
-    }
-  },
-  created() {
-    let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    this.isCollapse = isMobile;
-  }
 }
+
 </script>
 
 <style lang="scss">
